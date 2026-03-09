@@ -36,7 +36,7 @@ func main() {
 		mcp.WithDescription("提交一条命令，返回命令ID与初始状态"),
 		mcp.WithString("cmd",
 			mcp.Required(),
-			mcp.Description("要执行的完整命令字符串"),
+			mcp.Description("要执行的完整命令字符串。命令会被自动包装。PowerShell ——> powershell -NoLogo -NoProfile -Command <cmd> ; Bash ——> bash -lc <cmd>"),
 		),
 		mcp.WithObject("env",
 			mcp.Description("可选：环境变量映射"),
