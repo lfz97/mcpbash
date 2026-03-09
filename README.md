@@ -1,4 +1,4 @@
-# mcpbash
+# mcp-exec
 
 使用 [mcp-go](https://github.com/mark3labs/mcp-go) 构建的命令执行 MCP 服务器，支持 stdio 和 HTTP 两种运行模式。
 
@@ -23,13 +23,13 @@
 
 ```bash
 # 进入项目目录
-cd mcpbash
+cd mcp-exec
 
 # 整理依赖
 go mod tidy
 
 # 构建可执行文件
-go build -o mcpbash.exe ./cmd/mcpbash
+go build -o mcp-exec.exe ./cmd/mcp-exec
 ```
 
 ### 两种运行模式
@@ -39,7 +39,7 @@ go build -o mcpbash.exe ./cmd/mcpbash
 适用于 MCP 客户端通过标准输入输出连接本进程：
 
 ```bash
-./mcpbash.exe
+./mcp-exec.exe
 ```
 
 #### 2. HTTP 模式（远程调用）
@@ -48,13 +48,13 @@ go build -o mcpbash.exe ./cmd/mcpbash
 
 ```bash
 # 默认端口 8080
-./mcpbash.exe -mode http
+./mcp-exec.exe -mode http
 
 # 指定端口
-./mcpbash.exe -mode http -port 9000
+./mcp-exec.exe -mode http -port 9000
 
 # 绑定特定地址
-./mcpbash.exe -mode http -host 127.0.0.1 -port 8080
+./mcp-exec.exe -mode http -host 127.0.0.1 -port 8080
 ```
 
 HTTP 模式下，端点为 `POST /mcp`，符合 MCP over HTTP 规范。

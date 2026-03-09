@@ -1,4 +1,4 @@
-module mcpbash
+module mcp-exec
 
 go 1.23.0
 

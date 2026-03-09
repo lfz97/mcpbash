@@ -1,4 +1,4 @@
-基于mcp-go(github.com/mark3labs/mcp-go) 框架实现一个bash mcp组件
+基于mcp-go(github.com/mark3labs/mcp-go) 框架实现一个命令执行 MCP 组件
 
 功能清单：
 1. 提交命令：
